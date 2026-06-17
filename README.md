@@ -34,10 +34,11 @@ src/
 └── main/
     ├── java/
     │   └── com/estudo/agendadorhorarios/
-    │       ├── controller/   # Endpoints REST
-    │       ├── model/        # Entidades JPA
-    │       ├── repository/   # Interfaces de acesso ao banco
-    │       └── service/      # Regras de negócio
+    │       ├── controller/      # Endpoints REST
+    │       ├── infrastructure/
+    |            ├──Entity/      # Entidades JPA
+    |            ├── repository/ # Interfaces de acesso ao banco
+    │       └── service/         # Regras de negócio
     └── resources/
         └── application.properties
 ```
@@ -89,19 +90,18 @@ Senha: (deixar em branco)
 
 | Método | Endpoint | Descrição |
 |---|---|---|
-| `GET` | `/agendamentos` | Lista todos os agendamentos |
-| `GET` | `/agendamentos/{id}` | Busca agendamento por ID |
+| `GET` | `/agendamentos?data=2026-02-03` | Busca agendamento por data |
 | `POST` | `/agendamentos` | Cria um novo agendamento |
-| `PUT` | `/agendamentos/{id}` | Atualiza um agendamento |
-| `DELETE` | `/agendamentos/{id}` | Remove um agendamento |
+| `PUT` | `/agendamentos/?cliente=Silva Santos&dataHoraAgendamento=2026-02-03` | Atualiza um agendamento |
+| `DELETE` | `/agendamentos?cliente=Silva Santos&dataHoraAgendamento=2026-02-03T11:00:00` | Remove um agendamento |
 
 ### Exemplo de payload (POST)
 
 ```json
-{
-  "nome": "João Silva",
-  "dataHora": "2025-07-10T14:30:00",
-  "descricao": "Consulta médica"
+{"servico": "Unhas",
+"profissional": "Manicure",
+"dataHoraAgendamento": "2026-02-03T13:00",
+"cliente": "Flavia Santos"
 }
 ```
  
