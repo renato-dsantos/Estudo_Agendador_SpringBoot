@@ -118,6 +118,16 @@ Este projeto foi criado para praticar:
 - Uso do Lombok para reduzir código boilerplate
 ---
 
+## 📺 Referência
+
+Projeto desenvolvido acompanhando o vídeo:
+
+> **CRUD Java 2026 com Spring – projeto para portfólio**  
+> Canal: [Javanauta](https://www.youtube.com/@javanauta)  
+> 🔗 [Assistir no YouTube](https://youtu.be/5Cfo9ux8ezc?si=BY33qqTEOWIeBLyJ)
+
+---
+
 ## 👤 Autor
 
 **Renato D. Santos**  
